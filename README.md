@@ -1,28 +1,16 @@
-# CollabCanvas MVP 🎨
+# CollabCanvas MVP
 
-A real-time collaborative canvas application where multiple users can create, move, and interact with rectangles simultaneously. Built with Vue 3, Konva.js, and Firebase.
+CollabCanvas is a real-time collaborative canvas application where multiple users can create, move, and interact with rectangles simultaneously. Users can pan and zoom the canvas, see each other's cursors in real-time, and work together on the same canvas with instant synchronization. The app handles authentication, manages user presence, and resolves conflicts when multiple users edit simultaneously. Built with Vue 3, Konva.js, and Firebase.
 
-## 🌟 Features
-
-- **Real-time Collaboration**: Multiple users can edit simultaneously with instant synchronization
-- **Interactive Canvas**: Pan, zoom, and create rectangles with smooth interactions
-- **Multiplayer Cursors**: See other users' cursors with names and colors in real-time
-- **Presence Awareness**: View who's online and actively collaborating
-- **Conflict Resolution**: Smart handling of simultaneous edits with last-write-wins strategy
-- **Performance Optimized**: Handles 100+ rectangles and 5+ concurrent users smoothly
-- **Error Handling**: Graceful offline/online transitions and comprehensive error recovery
-- **Authentication**: Secure sign-in with email/password or Google OAuth
-
-## 🛠️ Technology Stack
+## Technology Stack
 
 - **Frontend**: Vue 3 + Vite + TypeScript
 - **Canvas**: Konva.js + Vue-Konva
 - **Backend**: Firebase (Firestore + Auth + Hosting)
 - **Styling**: CSS3 with custom components
 - **Real-time**: Firestore real-time listeners
-- **Performance**: Optimized rendering and throttled updates
 
-## 🏗️ Architecture Overview
+## Architecture Overview
 
 ```
 ┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
@@ -39,7 +27,7 @@ A real-time collaborative canvas application where multiple users can create, mo
 2. **Firestore Changes** → Real-time listeners → UI updates across all clients
 3. **Conflict Resolution** → Last write wins based on server timestamps
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - Node.js 18+ 
@@ -78,7 +66,7 @@ npm run dev
 
 Visit `http://localhost:5173` and start collaborating!
 
-## 📦 Deployment
+## Deployment
 
 ### Build for Production
 ```bash
@@ -98,44 +86,7 @@ firebase login
 firebase deploy
 ```
 
-## 🧪 Testing
-
-### Enable Testing Mode
-Add `?testing=true` to your URL to access the testing dashboard:
-```
-http://localhost:5173/canvas?testing=true
-```
-
-### Performance Monitoring
-Add `?debug=performance` to monitor performance metrics:
-```
-http://localhost:5173/canvas?debug=performance&testing=true
-```
-
-### Browser Console Testing
-```javascript
-// Run health check
-window.bugFixes.runHealthCheck()
-
-// Auto-fix issues
-window.bugFixes.autoFix()
-
-// Performance monitoring
-window.bugFixes.startPerformanceMonitoring(60000)
-```
-
-### Test Scenarios
-The app includes 6 comprehensive test scenarios:
-1. Two-User Simultaneous Editing
-2. Mid-Edit Refresh (data persistence)
-3. Rapid Rectangle Creation (load testing)
-4. Conflict Resolution (simultaneous edits)
-5. Disconnect/Reconnect (offline/online)
-6. Multi-User Scaling (3-5 users)
-
-See [TESTING_GUIDE.md](./TESTING_GUIDE.md) for detailed testing instructions.
-
-## 📁 Project Structure
+## Project Structure
 
 ```
 collab_canvas/
@@ -164,18 +115,7 @@ collab_canvas/
 └── README.md                   # This file
 ```
 
-## 🎯 Performance Targets
-
-| Metric | Target | Achieved |
-|--------|--------|----------|
-| Rectangle Sync Latency | <100ms | ✅ ~50ms |
-| Cursor Sync Latency | <50ms | ✅ ~25ms |
-| Canvas Responsiveness | 60fps | ✅ Smooth |
-| Max Rectangles | 100+ | ✅ Tested |
-| Max Concurrent Users | 5+ | ✅ Tested |
-| Memory Usage | <100MB | ✅ Optimized |
-
-## 🔧 Development
+## Development
 
 ### Key Composables
 
@@ -187,59 +127,6 @@ collab_canvas/
 - **`usePerformance`**: Monitors and optimizes app performance
 - **`useErrorHandling`**: Provides comprehensive error handling and recovery
 
-### Adding New Features
-
-1. Create composable for business logic
-2. Add Vue component for UI
-3. Update Firestore rules if needed
-4. Add tests to testing dashboard
-5. Update documentation
-
-## 🐛 Troubleshooting
-
-### Common Issues
-
-**Authentication Problems:**
-- Verify Firebase Auth is enabled
-- Check API keys in `.env.local`
-- Ensure domains are authorized in Firebase Console
-
-**Sync Issues:**
-- Check Firestore rules
-- Verify network connectivity  
-- Run `window.bugFixes.runHealthCheck()` in console
-
-**Performance Issues:**
-- Enable performance monitoring: `?debug=performance`
-- Check for memory leaks in DevTools
-- Run `window.bugFixes.autoFix()` for automatic optimization
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 🎯 MVP Completion Status
-
-- ✅ **Authentication System** - Email/password + Google OAuth
-- ✅ **Real-time Canvas** - Pan, zoom, create rectangles
-- ✅ **Multi-user Collaboration** - Simultaneous editing with conflict resolution
-- ✅ **Multiplayer Cursors** - Real-time cursor tracking with names/colors
-- ✅ **Presence Awareness** - Online user list and status
-- ✅ **Performance Optimization** - Meets all performance targets
-- ✅ **Error Handling** - Comprehensive error recovery and offline support
-- ✅ **Testing Framework** - Complete testing suite with 6 test scenarios
-- ✅ **Production Deployment** - Firebase Hosting with optimized build
-
-**Status: 🎉 MVP COMPLETE AND DEPLOYED**
-
 ---
 
-Built with ❤️ using Vue 3, Konva.js, and Firebase
+Built with Vue 3, Konva.js, and Firebase
