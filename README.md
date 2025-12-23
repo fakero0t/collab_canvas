@@ -2,6 +2,8 @@
 
 CollabCanvas is a real-time collaborative canvas application where multiple users can create, move, and interact with rectangles simultaneously. Users can pan and zoom the canvas, see each other's cursors in real-time, and work together on the same canvas with instant synchronization. The app handles authentication, manages user presence, and resolves conflicts when multiple users edit simultaneously. Built with Vue 3, Konva.js, and Firebase.
 
+![collab_canvas](collabcanvas.png)
+
 ## Technology Stack
 
 - **Frontend**: Vue 3 + Vite + TypeScript
